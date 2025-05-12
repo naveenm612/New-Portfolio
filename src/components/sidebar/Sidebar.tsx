@@ -5,16 +5,13 @@ import DescriptionIcon from '@mui/icons-material/Description';
 import PhotoLibraryIcon from '@mui/icons-material/PhotoLibrary';
 import EmailIcon from '@mui/icons-material/Email';
 import Man from '../../assets/Man.jpg';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import FacebookIcon from '@mui/icons-material/Facebook';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import XIcon from '@mui/icons-material/X';
 import "./SidebarStyle.css";
 
 export const Sidebar: React.FC = () => {
 
   const [activeSection, setActiveSection] = useState<string>("home");
-  
+
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -45,41 +42,32 @@ export const Sidebar: React.FC = () => {
           className="profile-pic"
         />
         <h2 className="profile-name">Naveen.M</h2>
-       <div style={{ display: "flex", gap: "20px" }}>
-  <a href="https://example.com/xicon" target="_blank" rel="noopener noreferrer">
-    <XIcon sx={{color:"white"}}/>
-  </a>
-  <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-    <FacebookIcon sx={{color:"white"}}/>
-  </a>
-  <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-    <InstagramIcon sx={{color:"white"}}/>
-  </a>
-  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-    <LinkedInIcon sx={{color:"white"}}/>
-  </a>
-</div>
+        <div style={{ display: "flex", gap: "20px" }}>
+          <a href="https://www.linkedin.com/in/naveen-m-1b44b9292/" target="_blank" rel="noopener noreferrer">
+            <LinkedInIcon sx={{ color: "white" }} />
+          </a>
+        </div>
 
       </div>
       <ul className="menu">
         <li className={`menu-item ${activeSection === "home" ? "active" : ""}`}
-        onClick={() => handleScroll('home')}>
-          <span className="icon"><HomeIcon/></span>
+          onClick={() => handleScroll('home')}>
+          <span className="icon"><HomeIcon /></span>
           Home
         </li>
         <li className={`menu-item ${activeSection === "about" ? "active" : ""}`}
-        onClick={() => handleScroll('about')}>
-          <span className="icon"><PersonIcon/></span>
+          onClick={() => handleScroll('about')}>
+          <span className="icon"><PersonIcon /></span>
           About
         </li>
         <li className={`menu-item ${activeSection === "resume" ? "active" : ""}`}
-        onClick={() => handleScroll('resume')}>
-          <span className="icon"><DescriptionIcon/></span>
+          onClick={() => handleScroll('resume')}>
+          <span className="icon"><DescriptionIcon /></span>
           Resume
         </li>
         <li className={`menu-item ${activeSection === "portfolio" ? "active" : ""}`}
-        onClick={() => handleScroll('portfolio')}>
-          <span className="icon"><PhotoLibraryIcon/></span>
+          onClick={() => handleScroll('portfolio')}>
+          <span className="icon"><PhotoLibraryIcon /></span>
           Skills
         </li>
         {/* <li className="menu-item" onClick={() => handleScroll('skills')}>
@@ -87,8 +75,8 @@ export const Sidebar: React.FC = () => {
           Skills
         </li> */}
         <li className={`menu-item ${activeSection === "contact" ? "active" : ""}`}
-        onClick={() => handleScroll('contact')}>
-          <span className="icon"><EmailIcon/></span>
+          onClick={() => handleScroll('contact')}>
+          <span className="icon"><EmailIcon /></span>
           Contact
         </li>
       </ul>

@@ -1,5 +1,5 @@
 import React from 'react';
-import Man from '../../assets/Man.jpg';
+import Man from '../../assets/image2.png';
 import './HeroStyle.css';
 
 const Hero: React.FC = () => {
@@ -8,7 +8,7 @@ const Hero: React.FC = () => {
       <img src={Man} alt="A man" className="hero-image" />
       <div className="hero-name">Naveen</div>
       <div className="hero-work">
-  <div className="typing-demo">I'm Developer</div>
+  <div className="typing-demo">MERN Stack Developer</div>
 </div>
 
     </div>
