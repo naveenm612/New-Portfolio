@@ -8,7 +8,7 @@
 
 .hero-image {
   width: 100%;
-  height: auto;
+  height: 100vh;
 }
 
 .hero-name {
@@ -36,7 +36,7 @@
   white-space: nowrap;
   overflow: hidden;
   border-right: 3px solid;
-  font-family: monospace;
+  font-family: 'Calibri', sans-serif;
   font-size: 30px;
 }
 
@@ -45,7 +45,7 @@
     width: 0;
   }
   50% {
-    width: 13ch;
+    width: 19ch;
   }
   100% {
     width: 0;
