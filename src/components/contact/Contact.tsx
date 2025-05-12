@@ -3,6 +3,7 @@ import { Paper, TextField, Button, Typography, Box, Snackbar, Alert } from "@mui
 import PersonPinCircleIcon from "@mui/icons-material/PersonPinCircle";
 import CallIcon from "@mui/icons-material/Call";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
+import "./ContactStyle.css"
 
 const Contact: React.FC = () => {
   const [formValues, setFormValues] = useState({

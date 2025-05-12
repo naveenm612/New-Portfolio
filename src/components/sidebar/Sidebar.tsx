@@ -4,9 +4,12 @@ import PersonIcon from '@mui/icons-material/Person';
 import DescriptionIcon from '@mui/icons-material/Description';
 import PhotoLibraryIcon from '@mui/icons-material/PhotoLibrary';
 import EmailIcon from '@mui/icons-material/Email';
-import Man from '../assets/Man.jpg';
-
-import "./Style.css";
+import Man from '../../assets/Man.jpg';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import XIcon from '@mui/icons-material/X';
+import "./SidebarStyle.css";
 
 export const Sidebar: React.FC = () => {
 
@@ -42,6 +45,21 @@ export const Sidebar: React.FC = () => {
           className="profile-pic"
         />
         <h2 className="profile-name">Naveen.M</h2>
+       <div style={{ display: "flex", gap: "20px" }}>
+  <a href="https://example.com/xicon" target="_blank" rel="noopener noreferrer">
+    <XIcon sx={{color:"white"}}/>
+  </a>
+  <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+    <FacebookIcon sx={{color:"white"}}/>
+  </a>
+  <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+    <InstagramIcon sx={{color:"white"}}/>
+  </a>
+  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+    <LinkedInIcon sx={{color:"white"}}/>
+  </a>
+</div>
+
       </div>
       <ul className="menu">
         <li className={`menu-item ${activeSection === "home" ? "active" : ""}`}

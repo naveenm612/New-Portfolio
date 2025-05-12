@@ -1,8 +1,8 @@
 import React from 'react';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
-import './Style.css';
-import Man from '../assets/Man.jpg';
+import './AboutStyle.css';
+import Man from '../../assets/Man.jpg';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 const AboutPage: React.FC = () => {

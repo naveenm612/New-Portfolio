@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
-import "./Style.css";
+import "./ButtonStyle.css";
 
 const Button: React.FC = () => {
   const [showButton, setShowButton] = useState(false);

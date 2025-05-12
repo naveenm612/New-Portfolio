@@ -1,12 +1,12 @@
 import React from 'react';
-import { Sidebar } from './Sidebar';
-import Hero from './Hero';
-import AboutPage from './About';
-import ResumePage from './Resume';
-import Skill from './Skills';
-import Contact from './Contact';
-import Button from './Button';
-import { Footer } from './Footer';
+import { Sidebar } from './sidebar/Sidebar';
+import Hero from './herobanner/Hero';
+import AboutPage from './about/About';
+import ResumePage from './resume/Resume';
+import Skill from './skills/Skills';
+import Contact from './contact/Contact';
+import Button from './button/Button';
+import { Footer } from './footer/Footer';
 import './Style.css';
 
 
