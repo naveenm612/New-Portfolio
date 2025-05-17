@@ -20,13 +20,13 @@
     top: 0;
     left: 0;
     height: 100%;
-    width: 15rem; /* Adjust the width as needed */
-    background-color: #1f2937; /* Tailwind's gray-800 */
+    width: 15rem;
+    background-color: #1f2937; 
   }
   
   .portfolio-main {
     flex: 1;
-    margin-left: 15rem; /* Match the width of the sidebar */
+    margin-left: 15rem; 
     display: flex;
     flex-direction: column;
   }
@@ -36,6 +36,21 @@
     flex-direction: column;
   }
   .portfolio-footer {
-    margin-top: auto; /* Push the footer to the bottom */
+    margin-top: auto; 
   }
-  
+
+@media (max-width: 768px) {
+    .portfolio-layout {
+        flex-direction: column;
+    }
+
+    .portfolio-sidebar {
+        position: relative;
+        width: 100%;
+        height: auto; 
+    }
+
+    .portfolio-main {
+        margin-left: 0; 
+    }
+}

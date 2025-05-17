@@ -26,6 +26,12 @@
     object-fit: cover;
     border: 3px solid #1f2937;
   }
+  @media (max-width: 768px) {
+    .profile-pic {
+    width: 150px;
+    height: 150px;
+  }
+}
   
   .profile-name {
     margin-top: 10px;

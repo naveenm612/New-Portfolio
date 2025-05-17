@@ -44,7 +44,7 @@ const AboutPage: React.FC = () => {
                     <ArrowForwardIosIcon style={{ fontSize: '12px', marginRight: '5px' }} />
                     Website:
                   </strong>{' '}
-                  www.example.com
+                  forms-gamma-smoky.vercel.app
                 </li>
                 <li className="info-item">
                   <strong className="strong">
