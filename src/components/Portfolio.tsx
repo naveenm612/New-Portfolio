@@ -1,14 +1,14 @@
+
 import React from 'react';
-import { Sidebar } from './sidebar/Sidebar';
+import Sidebar from './sidebar/Sidebar';
 import Hero from './herobanner/Hero';
 import AboutPage from './about/About';
 import ResumePage from './resume/Resume';
 import Skill from './skills/Skills';
 import Contact from './contact/Contact';
 import Button from './button/Button';
-import { Footer } from './footer/Footer';
+import Footer from './footer/Footer';
 import './Style.css';
-
 
 const PortfolioLayout: React.FC = () => {
   return (
@@ -20,25 +20,25 @@ const PortfolioLayout: React.FC = () => {
 
       {/* Main Content */}
       <div className="portfolio-main">
-      <section id="home" className="portfolio-hero">
-        <Hero />
+        <section id="home" className="portfolio-hero">
+          <Hero />
         </section>
-      <section id="about">
-        <AboutPage />
+        <section id="about">
+          <AboutPage />
         </section>
         <section id="resume">
-        <ResumePage />
+          <ResumePage />
         </section>
         <section id="portfolio">
-        <Skill />
+          <Skill />
         </section>
         <section id="contact">
-        <Contact />
+          <Contact />
         </section>
 
         {/* Footer */}
         <div className="portfolio-footer" >
-        <Footer />
+          <Footer />
         </div>
       </div>
       <Button />

@@ -35,9 +35,10 @@
   animation: typing 8s steps(22) 1s infinite, blink 0.5s step-end infinite alternate;
   white-space: nowrap;
   overflow: hidden;
-  border-right: 3px solid;
+  border-right: 2px solid;
+  height: 50%;
   font-family: 'Calibri', sans-serif;
-  font-size: 30px;
+  font-size: 22px;
 }
 
 @keyframes typing {

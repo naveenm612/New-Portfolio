@@ -1,77 +1,101 @@
+/* Sidebar Style */
+.sidebar {
+  background-color: #111827;
+  color: #ffffff;
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: left 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1000;
+}
 
-  /* SideBar*/
-  
+.sidebar.open {
+ transform: translateX(0);
+}
+.sidebar.closed {
+  transform: translateX(-100%); 
+}
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.profile-pic {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border: 3px solid #1f2937;
+}
+
+.profile-name {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  width: 100%;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.menu-item:hover {
+  background-color: #1f2937;
+  color: #60a5fa;
+}
+
+.icon {
+  margin-right: 12px;
+}
+
+.menu-button {
+  display: none;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background-color: #1f2937;
+  color: #ffffff;
+  border: none;
+  padding: 8px;
+  width: 40px;
+  height: 40px; 
+  cursor: pointer;
+  z-index: 1100;
+}
+
+
+.menu-button:hover {
+  background-color: #374151;
+}
+
+@media (max-width: 768px) {
   .sidebar {
-    background-color: #111827;
-    color: #ffffff;
-    width: auto;
-    min-height: 100vh;
-    padding: 16px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+   transform: translateX(-100%);
   }
-  
-  .profile {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
+   .sidebar.open {
+    transform: translateX(0); /* Slide in when open */
   }
-  
-  .profile-pic {
-    border-radius: 50%;
-    width: 80px;
-    height: 80px;
-    object-fit: cover;
-    border: 3px solid #1f2937;
-  }
-  @media (max-width: 768px) {
-    .profile-pic {
-    width: 150px;
-    height: 150px;
+
+   .menu-button {
+    display: block; /* Show the menu button on smaller screens */
   }
 }
-  
-  .profile-name {
-    margin-top: 10px;
-    font-size: 18px;
-    font-weight: bold;
-  }
-  
-  .menu {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-  }
-  
-  .menu-item {
-    display: flex;
-    align-items: center;
-    padding: 10px 16px;
-    border-radius: 8px;
-    margin-bottom: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-  }
-  
-  .menu-item:hover {
-    background-color: #1f2937;
-    color: #60a5fa;
-  }
-  
-  .icon {
-    margin-right: 12px;
-    padding-top: 5px;
-    /* font-size: 18px; */
-  }
-  
-  .social-icons {
-    display: flex;
-    gap: 12px;
-    margin-top: auto;
-    font-size: 20px;
-  }
-  
-
