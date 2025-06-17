@@ -20,7 +20,9 @@ const skills: Skill[] = [
 const SkillsSection: React.FC = () => {
   return (
     <section className="skills-section">
+      <div className='title-container'>
       <h2 className="title">Skills</h2>
+      </div>
       <p className="skills-description">
       I specialize in building dynamic and responsive web applications, with a strong focus on frontend development, backend integration, and database management. 
       Below are the technologies and tools I am proficient in :

@@ -5,7 +5,9 @@ const ResumePage = () => {
     <div className="page-container">
       <div>
         <header className="resume-header">
+          <div className='title-container'>
           <h2 className="title">Resume</h2>
+          </div>
         </header>
 
         <div className="content-grid">
@@ -15,7 +17,7 @@ const ResumePage = () => {
             <div className="section-content">
               <div className="experience-item">
                 <h3>TechnomaX Systems</h3>
-                <p className="role">Web Developer & MERN Stack Developer</p>
+                <p className="role">Front-End Developer & MERN Stack Developer</p>
                 <p className="duration">Jan 2024 - Present</p>
                 <ul>
                   <li>

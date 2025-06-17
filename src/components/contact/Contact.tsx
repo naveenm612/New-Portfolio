@@ -3,7 +3,7 @@ import { Paper, TextField, Button, Typography, Box, Snackbar, Alert } from "@mui
 import PersonPinCircleIcon from "@mui/icons-material/PersonPinCircle";
 import CallIcon from "@mui/icons-material/Call";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
-import "./ContactStyle.css"
+import "./ContactStyle.css";
 
 const Contact: React.FC = () => {
   const [formValues, setFormValues] = useState({
@@ -19,7 +19,7 @@ const Contact: React.FC = () => {
     message: "",
   });
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormValues((prev) => ({
       ...prev,
@@ -27,42 +27,45 @@ const Contact: React.FC = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-
-    // Validation: Check if all fields are filled
-    if (!formValues.name || !formValues.email || !formValues.subject || !formValues.message) {
-      setAlert({
-        open: true,
-        type: "error",
-        message: "All fields are required. Please fill out all fields.",
-      });
-      return;
-    }
-
-    // If validation passes, show success message
-    setAlert({
-      open: true,
-      type: "success",
-      message: "Message sent successfully!",
-    });
-
-    // Optionally clear the form after submission
-    setFormValues({
-      name: "",
-      email: "",
-      subject: "",
-      message: "",
-    });
+  const handleCloseAlert = () => {
+    setAlert({ open: false, type: "success", message: "" });
   };
 
-  const handleCloseAlert = () => {
-    setAlert((prev) => ({ ...prev, open: false }));
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setAlert({ open: true, type: "success", message: "Processing..." });
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "a4ecbec3-820b-4140-b28c-62603714e9a1",
+          ...formValues,
+        }),
+      });
+
+      const data = await res.json();
+
+      if (data.success) {
+
+        setAlert({ open: true, type: "success", message: "Message sent successfully!" });
+        setFormValues({ name: "", email: "", subject: "", message: "" });
+      } else {
+        throw new Error(data.message || "Something went wrong. Please try again later.");
+      }
+    } catch (error: any) {
+      setAlert({ open: true, type: "error", message: error.message || "Submission failed!" });
+    }
   };
 
   return (
     <section className="contact-section">
-      <h2 className="title">Contact</h2>
+      <div className="title-container">
+        <h2 className="title">Contact</h2>
+      </div>
       <p className="about-description">
         Feel free to reach out to me for any inquiries, collaboration opportunities, or questions.
         I'm always open to discussing exciting projects and innovative ideas.
@@ -162,6 +165,7 @@ const Contact: React.FC = () => {
                   onChange={handleInputChange}
                   variant="outlined"
                   size="small"
+                  required
                 />
                 <TextField
                   fullWidth
@@ -171,6 +175,8 @@ const Contact: React.FC = () => {
                   onChange={handleInputChange}
                   variant="outlined"
                   size="small"
+                  type="email"
+                  required
                 />
               </Box>
               <TextField
@@ -182,6 +188,7 @@ const Contact: React.FC = () => {
                 variant="outlined"
                 size="small"
                 sx={{ marginBottom: "15px" }}
+                required
               />
               <TextField
                 fullWidth
@@ -193,6 +200,7 @@ const Contact: React.FC = () => {
                 multiline
                 rows={4}
                 sx={{ marginBottom: "15px" }}
+                required
               />
               <Button
                 type="submit"
@@ -215,7 +223,9 @@ const Contact: React.FC = () => {
       </Box>
 
       {/* Snackbar for Alerts */}
-      <Snackbar open={alert.open} autoHideDuration={3000} onClose={handleCloseAlert}>
+      <Snackbar open={alert.open} onClose={handleCloseAlert}
+        autoHideDuration={3000}
+        anchorOrigin={{ vertical: "bottom", horizontal: "right" }}>
         <Alert onClose={handleCloseAlert} severity={alert.type} sx={{ width: "100%" }}>
           {alert.message}
         </Alert>

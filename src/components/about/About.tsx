@@ -9,9 +9,11 @@ const AboutPage: React.FC = () => {
   return (
     <section className="about-section">
       <Container>
+        <div className='title-container'>
         <h2 className="title">About</h2>
+        </div>
         <Typography className="about-description">
-        I am a passionate Web Developer and MERN stack developer, specializing in building modern, dynamic, and scalable web applications. 
+        I am a passionate MERN stack developer, specializing in building modern, dynamic, and scalable web applications. 
         I thrive in creating robust backend services using Node.js, managing data with MongoDB, and delivering seamless frontend experiences with React.js. 
         My goal is to build solutions that are not only functional but also user-friendly and visually appealing. 
         I am always eager to learn and improve my skills with the latest technologies and best practices.
@@ -24,7 +26,7 @@ const AboutPage: React.FC = () => {
           {/* Details Section */}
           <div className="about-details">
             <Typography className="about-heading" variant="h5">
-              Web Developer & MERN stack developer
+              Front-End Developer & MERN stack developer
             </Typography>
             <Typography className="about-subtext">
             I develop full-stack web applications, working with MongoDB for data management, Express.js for server-side logic, React.js for responsive UIs, and Node.js for backend development. 
