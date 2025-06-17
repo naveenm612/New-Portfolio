@@ -28,6 +28,8 @@
   .about-image {
     flex: 1; 
     text-align: center;
+    position: relative;
+    animation: float 6s ease-in-out infinite;
   }
   
   .about-image img {
