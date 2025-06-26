@@ -7,6 +7,7 @@ import EmailIcon from "@mui/icons-material/Email";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import CollectionsIcon from '@mui/icons-material/Collections';
 import Man from "../../assets/Man.jpg";
 import "./SidebarStyle.css";
 
@@ -101,12 +102,23 @@ const Sidebar: React.FC = () => {
           </li>
           <li
             className={`menu-item ${
+              activeSection === "skills" ? "active" : ""
+            }`}
+            onClick={() => handleScroll("skills")}
+          >
+            <span className="icon">
+              <PhotoLibraryIcon />
+            </span>
+            Skills
+          </li>
+             <li
+            className={`menu-item ${
               activeSection === "portfolio" ? "active" : ""
             }`}
             onClick={() => handleScroll("portfolio")}
           >
             <span className="icon">
-              <PhotoLibraryIcon />
+              <CollectionsIcon />
             </span>
             Portfolio
           </li>

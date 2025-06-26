@@ -1,5 +1,5 @@
 import React from "react";
-import Man from '../../assets/1Man.jpg';
+import Man from '../../assets/Man.jpg';
 import "./HeroStyle.css";
 
 const Hero: React.FC = () => {

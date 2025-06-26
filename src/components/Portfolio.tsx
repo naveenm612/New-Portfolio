@@ -5,6 +5,7 @@ import Hero from './herobanner/Hero';
 import AboutPage from './about/About';
 import ResumePage from './resume/Resume';
 import Skill from './skills/Skills';
+import Portfolio from './portfolio/Portfolio';
 import Contact from './contact/Contact';
 import Button from './button/Button';
 import Footer from './footer/Footer';
@@ -29,8 +30,11 @@ const PortfolioLayout: React.FC = () => {
         <section id="resume">
           <ResumePage />
         </section>
-        <section id="portfolio">
+        <section id="skills">
           <Skill />
+        </section>
+         <section id="portfolio">
+          <Portfolio />
         </section>
         <section id="contact">
           <Contact />
