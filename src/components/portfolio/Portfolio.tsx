@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Notes from "../../assets/Notes2.jpg"; 
+import Todo from "../../assets/Todo.jpg"; 
 import "./Portfolio.css";
 
 interface PortfolioItem {
@@ -14,6 +15,7 @@ const Portfolio: React.FC = () => {
 
   const portfolioItems: PortfolioItem[] = [
     { id: 1, category: "Website", image: Notes, link: "https://notes-app-lime-two.vercel.app/",},
+    { id: 2, category: "Website", image: Todo, link: "https://todo-app-seven-pearl.vercel.app/",},
   ];
 
   const filteredItems =
