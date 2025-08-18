@@ -18,7 +18,7 @@ const ResumePage = () => {
               <div className="experience-item">
                 <h3>TechnomaX Systems</h3>
                 <p className="role">Front-End Developer & MERN Stack Developer</p>
-                <p className="duration">Jan 2024 - Present</p>
+                <p className="duration">Jan 2024 - June 2025</p>
                 <ul>
                   <li>
                     Designed and deployed responsive websites and dynamic web applications, 

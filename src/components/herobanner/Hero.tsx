@@ -11,7 +11,7 @@ const Hero: React.FC = () => {
           I'm <span className="highlight">Naveen</span>
         </h1>
         <p className="hero-description">
-          I am into <span className="highlight">MERN Stack Development</span>
+          I am a <span className="highlight">Front-End Developer</span>
         </p>
       </div>
       <div className="hero-animation">
